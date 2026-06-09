@@ -209,7 +209,7 @@ function VisualComparison({ result, originalPdfUrl, recreatedPdfUrl }: { result:
   }, [result.issues]);
   const [pageNumber, setPageNumber] = useState(result.previews.original.pages[0]?.pageNumber ?? 1);
   const [zoom, setZoom] = useState(1);
-  const [annotationMode, setAnnotationMode] = useState<AnnotationMode>("pins");
+  const [annotationMode, setAnnotationMode] = useState<AnnotationMode>("focus");
   const [issuePagesOnly, setIssuePagesOnly] = useState(false);
   const [syncScroll, setSyncScroll] = useState(true);
   const [filter, setFilter] = useState<IssueFilter>("all");
