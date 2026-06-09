@@ -1,0 +1,33 @@
+{
+  "name": "native-gdocs-object-router",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "debug:convert": "node scripts/debug-convert-docx.mjs",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.17.0",
+    "mammoth": "^1.12.0",
+    "next": "14.2.35",
+    "next-themes": "^0.4.6",
+    "pdf-parse": "^2.4.5",
+    "pdfjs-dist": "^4.10.38",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.35",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
+  }
+}

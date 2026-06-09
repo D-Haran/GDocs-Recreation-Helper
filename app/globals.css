@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --background: #eef3f8;
+  --foreground: #0f172a;
+  --surface: #ffffff;
+  --surface-muted: #f6f8fb;
+  --surface-raised: #ffffff;
+  --border: #dbe4ee;
+  --border-strong: #c8d3df;
+  --muted: #526174;
+  --muted-strong: #334155;
+  --accent: #7e22ce;
+  --accent-strong: #6b21a8;
+  --accent-soft: #f3e8ff;
+  --accent-border: #e9d5ff;
+  --ring: #a855f7;
+}
+
+.dark {
+  color-scheme: dark;
+  --background: #0b1120;
+  --foreground: #f8fafc;
+  --surface: #121a2b;
+  --surface-muted: #192337;
+  --surface-raised: #1f2a3d;
+  --border: #2b3850;
+  --border-strong: #40506a;
+  --muted: #a7b3c6;
+  --muted-strong: #d6deea;
+  --accent: #c084fc;
+  --accent-strong: #d8b4fe;
+  --accent-soft: #2a1741;
+  --accent-border: #5b2d7d;
+  --ring: #c084fc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--accent) 12%, transparent), transparent 28rem),
+    var(--background);
+}
+
+::selection {
+  background: var(--accent-soft);
+  color: var(--accent-strong);
+}
+
+.pdf-pane-scroll {
+  overflow: auto;
+}
+
+.pdf-page-shell {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  background: white;
+}
+
+.pdf-canvas {
+  display: block;
+  background: white;
+}
+
+.annotation-layer,
+.pin-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
